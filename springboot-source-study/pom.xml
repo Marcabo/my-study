@@ -9,10 +9,12 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.herion</groupId>
-    <artifactId>springboot-source</artifactId>
+    <artifactId>springboot-source-study</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-source</name>
+    <name>springboot-source-study</name>
     <description>SpringBoot Source Study</description>
+
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
@@ -51,6 +53,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.herion.springbootsource.SpringbootSourceApplication</mainClass>
+                    <layout>JAR</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
